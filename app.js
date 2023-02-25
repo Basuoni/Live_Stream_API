@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3122
 app.use(express.json());
 app.use('/liveStream', require('./apis/mux_client.api'))
 app.use('/agoraAccessToken', require('./apis/agora_client.api'))
